@@ -38,12 +38,12 @@ struct ContentView: View {
                             viewModel.requestAllowOnceLocationPermission()
                         }
                                 .font(.system(size: 30))
+                                .frame(width: 40, height: 30)
                                 .foregroundColor(.primary)
                                 .labelStyle(.iconOnly)
                                 .tint(.clear)
                         
                         TextField("Search", text: $searchLocation, onCommit: {
-                            // some code
                             // find a way to disable pushing return button, unless there is text in textfield
                             
                            updateWeatherInfo()
@@ -60,6 +60,7 @@ struct ContentView: View {
                            updateWeatherInfo()
                         } label: {
                             Image(systemName: "magnifyingglass")
+                                .frame(width: 40, height: 30)
                                 .font(.system(size: 30))
                                 .foregroundColor(.primary)
                         }
